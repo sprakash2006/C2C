@@ -3,3 +3,33 @@
   margin:0 auto;
 
 }
+
+
+
+.updates-strip {
+  overflow-x: hidden;
+  animation: wiggle 10s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    right:20vw;
+  }
+  50% {
+    right:30vw;
+  }
+}
+
+
+.star {
+  animation: fikerr 5s ease-in-out infinite;
+}
+
+@keyframes fikerr {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
