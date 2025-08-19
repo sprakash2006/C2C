@@ -9,12 +9,14 @@ import Join from '../src/pages/Join'
 import Team from '../src/pages/Team'
 import Layout from '../src/Layout/layout'
 import NoPage from'../src/pages/NoPage'
+import ScrollToTop from '../src/components/ScrollToTop'
 
 function App() {
 
   return (
     <>
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
