@@ -48,49 +48,10 @@ const Home = () => {
         </video>
       </div>
 
-      {/* Example Join Form */}
-      <div className="bg-black text-white flex justify-center py-20">
-        <form
-          onSubmit={handleSubmit}
-          className="bg-[#111] p-8 rounded-lg shadow-lg w-[400px]"
-        >
-          <h2 className="text-2xl mb-6 text-center font-bold">Join Club</h2>
 
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full mb-4 p-2 rounded text-black"
-          />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full mb-4 p-2 rounded text-black"
-          />
 
-          <input
-            type="tel"
-            name="phone"
-            placeholder="Enter Phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="w-full mb-6 p-2 rounded text-black"
-          />
-
-          <button
-            type="submit"
-            className="w-full bg-[#110124ea] py-2 rounded-lg font-medium hover:opacity-80 transition"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+      
     </>
   );
 };
