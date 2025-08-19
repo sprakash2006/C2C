@@ -34,9 +34,9 @@ const header = () => {
           <NavLink className={({ isActive }) => isActive ? "border-b-2 border-[rgb(255,0,0)] text-white pb-1" : "pb-1 hover:border-b-2 text-white hover:border-gray-500"} to='/Event' replace>Events</NavLink>
           <NavLink className={({ isActive }) => isActive ? "border-b-2 border-[rgb(255,0,0)] text-white pb-1" : "pb-1 hover:border-b-2 text-white hover:border-gray-500"} to='/Join' replace>Join Us</NavLink>
         </div>
-        <span className='absolute top-17 text-[#ffffff51]'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
-        <span className='absolute top-3.5 rotate-50 left-[193.5px] text-[#ffffff51]'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
-        <span className='absolute top-[17px] right-[190px]  rotate-130 text-[#ffffff51]'>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
+        <span className='absolute top-17 text-[#ffffff51]' style={{ textShadow: "0 0 5px #ff0050" }}>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
+        <span className='absolute top-3.5 rotate-50 left-[193.5px] text-[#ffffff51]' style={{ textShadow: "0 0 5px #ff0050" }}>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
+        <span className='absolute top-[17px] right-[190px]  rotate-130 text-[#ffffff51]' style={{ textShadow: "0 0 5px #ff0050" }}>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</span>
       </div>
     </>
     
