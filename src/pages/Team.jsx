@@ -63,9 +63,9 @@ const Team = () => {
   return (
     <div className="bg-black text-white pb-[5vw]">
       <Header />
-      <div className="flex flex-col justify-center items-center pt-[20vw]">
+      <div className="flex flex-col justify-center items-center pt-[40vw] md:pt-[20vw]">
         <p 
-          className="text-9xl font-bold text-[rgba(255,255,255,0.7)] overflow-hidden"
+          className=" text-5xl md:text-9xl font-bold text-[rgba(255,255,255,0.7)] overflow-hidden"
           style={{ fontFamily: '"Potta One", system-ui', fontWeight: 400, fontStyle: "normal" }}
         >
           Meet Our Team
@@ -73,7 +73,7 @@ const Team = () => {
       </div>
 
       <div>
-        <p className="text-center text-4xl pt-[5vw] overflow-hidden pb-[3vw]">𖤐 LeaderShip 𖤐</p>
+        <p className="text-center text-2xl md:text-4xl pt-[14vw] md:pt-[5vw] overflow-hidden pb-1 md:pb-[3vw]">𖤐 LeaderShip 𖤐</p>
 
         <div>
           {OurTeam
@@ -90,7 +90,7 @@ const Team = () => {
             ))}
         </div>
 
-        <div className="flex justify-center items-center gap-[5vw]">
+        <div className="flex flex-col md:flex-row justify-center items-center md:gap-[5vw]">
           {OurTeam
             .filter((member) => member.role === "President" || member.role === "Vice President") // also fix case sensitivity
             .map((member) => (
@@ -105,7 +105,7 @@ const Team = () => {
             ))}
         </div>
         <p className="text-center text-4xl pt-[5vw] overflow-hidden pb-[3vw]">𖤐 &nbsp;Secretary Team&nbsp; 𖤐</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-[12vw]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:px-[12vw]">
           {OurTeam
             .filter((member) => member.role.includes("Secretary"))
             .map((member) => (
@@ -119,12 +119,12 @@ const Team = () => {
               />
             ))}
         </div>
-        <p className="text-center text-4xl pt-[5vw] overflow-hidden pb-[5vw]">𖤐 &nbsp;Team Coordinators&nbsp; 𖤐</p>
+        <p className="text-center text-3xl md:text-4xl pt-[5vw] overflow-hidden pb-[5vw]">𖤐 &nbsp;Team Coordinators&nbsp; 𖤐</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-[7vw] gap-y-4">
           {OurTeam
             .filter((member) => member.role.includes("Coordinator"))
             .map((member) => (
-              <div className='flex flex-col min-w-[18vw] py-4 bg-[rgba(255,255,255,0.05)] border-[0.01rem] border-[rgba(255,255,255,0.1)] rounded-[10px] duration-500 hover:shadow-[0_1px_0_#F3C623,inset_0_-1px_0_#F3C623]'>
+              <div className='flex flex-col min-w-[70vw] md:min-w-[18vw] py-4 bg-[rgba(255,255,255,0.05)] border-[0.01rem] border-[rgba(255,255,255,0.1)] rounded-[10px] duration-500 hover:shadow-[0_1px_0_#F3C623,inset_0_-1px_0_#F3C623]'>
                 <p className='text-[1.1rem] font-semibold'>{member.name}</p>
                 <p className='text-[0.95rem] opacity-60'>{member.role}</p>
               </div>
