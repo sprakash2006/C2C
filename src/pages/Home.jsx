@@ -67,34 +67,34 @@ const updates = [
         </video>
       </div>
 
-      <div className="px-[10vw] py-[4vw] bg-[#010015] border-t border-b border-dashed border-t-[#ffffff4c] border-b-[#ffffff4c] text-white">
-        <p className='text-center text-3xl' style={{ fontFamily: "Montserrat, sans-serif", fontOpticalSizing: "auto", fontWeight: "300", fontStyle: "normal" }}>“At <span style={{ background: "linear-gradient(90deg, #ff0057, #ff7e00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontWeight:"500" }}>Career Carfly</span> , we are a community of passionate coders and innovators, driven to inspire creativity, sharpen problem-solving, and build real-world projects through coding sessions, competitions, and collaborations.”</p>
+      <div className="px-[2vw] md:px-[10vw] py-[10vw] md:py-[4vw] bg-[#010015] border-t border-b border-dashed border-t-[#ffffff4c] border-b-[#ffffff4c] text-white">
+        <p className='text-center text-[1.25rem] md:text-3xl' style={{ fontFamily: "Montserrat, sans-serif", fontOpticalSizing: "auto", fontWeight: "300", fontStyle: "normal" }}>“At <span style={{ background: "linear-gradient(90deg, #ff0057, #ff7e00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontWeight:"500" }}>Career Carfly</span> , we are a community of passionate coders and innovators, driven to inspire creativity, sharpen problem-solving, and build real-world projects through coding sessions, competitions, and collaborations.”</p>
       </div>
 
 
   
-      <div className="bg-black text-white p-8 pb-[5vw]">
-        <h1 className="text-6xl font-bold pb-[7vw] text-center pt-[7vw]" style={{ fontFamily: "Faculty Glyphic, sans-serif", fontWeight: 400, fontStyle: "normal" }}>Why Join <span style={{ background: "linear-gradient(90deg, #ff0057, #ff7e00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Career Carfly</span>  Club ?</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-[8vw] pb-[5vw]">
+      <div className="bg-black text-white p-8 pb-[10vw] md:pb-[5vw]">
+        <h1 className=" text-4xl md:text-6xl font-bold pb-[8vw] md:pb-[7vw] text-center pt-[10vw] md:pt-[7vw]" style={{ fontFamily: "Faculty Glyphic, sans-serif", fontWeight: 400, fontStyle: "normal" }}>Why Join <span style={{ background: "linear-gradient(90deg, #ff0057, #ff7e00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>Career Carfly</span>  Club ?</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 md:px-[8vw] pb-[13vw] md:pb-[5vw]">
 
-          <div className="p-5 border border-dotted border-[#ff80008a] rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold pb-2">Practical Learning & Skill Development</h2>
-            <p className='text-[#ffffffc5]'>Hands-on workshops, training sessions, and projects that focus on real-world applications instead of just theory.</p>
+          <div className="p-3 md:p-5 border border-dotted border-[#ff80008a] rounded-lg shadow-lg">
+            <h2 className="text-[1.2rem] md:text-2xl font-semibold pb-1 md:pb-2">Practical Learning & Skill Development</h2>
+            <p className='text-[#ffffffc5] text-[0.9rem] md:text-1xl'>Hands-on workshops, training sessions, and projects that focus on real-world applications instead of just theory.</p>
           </div>
 
-          <div className="p-5 border border-dotted border-[#ff0055aa] rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold pb-2">Industry Exposure & Networking</h2>
-            <p className='text-[#ffffffc5]'>Direct connections with professionals, CEOs, and partner companies through events, guest talks, and internships.</p>
+          <div className="p-3 md:p-5 border border-dotted border-[#ff0055aa] rounded-lg shadow-lg">
+            <h2 className="text-[1.2rem] md:text-2xl font-semibold pb-1 md:pb-2">Industry Exposure & Networking</h2>
+            <p className='text-[#ffffffc5] text-[0.9rem] md:text-1xl'>Direct connections with professionals, CEOs, and partner companies through events, guest talks, and internships.</p>
           </div>
 
-          <div className="p-5 border border-dotted border-[#ff0055aa] rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold pb-2">Innovation & Projects</h2>
-            <p className='text-[#ffffffc5]'>Organizing hackathons, flagship events like Teach Shark, and industrial projects where students pitch and build impactful solutions.</p>
+          <div className="p-3 md:p-5 border border-dotted border-[#ff0055aa] rounded-lg shadow-lg">
+            <h2 className="text-[1.2rem] md:text-2xl font-semibold pb-1 md:pb-2">Innovation & Projects</h2>
+            <p className='text-[#ffffffc5] text-[0.9rem] md:text-1xl'>Organizing hackathons, flagship events like Teach Shark, and industrial projects where students pitch and build impactful solutions.</p>
           </div>
 
-          <div className="p-5 border border-dotted border-[#ff80008a] rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold pb-2">Career Growth & Opportunities</h2>
-            <p className='text-[#ffffffc5]'>Certificates, internships, mentorship, and direct recruitment pathways through Career Carfly Pvt. Ltd. and its partners.</p>
+          <div className="p-3 md:p-5 border border-dotted border-[#ff80008a] rounded-lg shadow-lg">
+            <h2 className="text-[1.2rem] md:text-2xl font-semibold pb-1 md:pb-2">Career Growth & Opportunities</h2>
+            <p className='text-[#ffffffc5] text-[0.9rem] md:text-1xl'>Certificates, internships, mentorship, and direct recruitment pathways through Career Carfly Pvt. Ltd. and its partners.</p>
           </div>
 
         </div>
@@ -125,7 +125,7 @@ const updates = [
           </div>
 
           <NavLink to='/Join'>
-            <div className='text-white text-center pt-10 flex px-[42vw]'>
+            <div className='text-white text-center pt-10 flex px-[21vw] md:px-[42vw]'>
               <div className="relative left-2 top-[2px] h-6 w-6 flex items-center justify-center">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
@@ -138,14 +138,14 @@ const updates = [
       </section>
 
       <section className="bg-black text-white pb-[10vw] overflow-hidden">
-        <p className='updates-strip relative bg-[#00397f] text-[1.5rem] w-[350vw] py-[5px]' style={{ fontFamily: '"Silkscreen", sans-serif', fontWeight: 400, fontStyle: "normal" }}>Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates</p>
+        <p className='updates-strip relative bg-[#00397f] text-[1.5rem] w-[350vw] md:py-[5px]' style={{ fontFamily: '"Silkscreen", sans-serif', fontWeight: 400, fontStyle: "normal" }}>Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates <span className='text-black'>✶</span> Updates</p>
         
         
-        <div className='pt-[7vw]'>
+        <div className='pt-[15vw] md:pt-[7vw] md:px-[7vw]'>
           {updates.map((update) => {
             return(
-              <div key={update.index} className="pb-8 md:pl-35">
-                  <a href={update.link} className="text-[1.25rem] bg-[#010a14] hover:bg-[#041120] opacity-50 hover:opacity-100 border border-[#ffffff51] rounded-[5px] px-7 py-3 " style={{ fontFamily: "Libertinus Sans, sans-serif", fontWeight: 400, fontStyle: "normal" }}>{update.title}</a>
+              <div key={update.index} className="pb-4 md:pb-2 md:pl-10 bg-[#010a14] hover:bg-[#041120] opacity-50 hover:opacity-100 border border-[#ffffff51] rounded-[5px] px-7 py-3">
+                  <a href={update.link} className=" md:text-[1.25rem] " style={{ fontFamily: "Libertinus Sans, sans-serif", fontWeight: 400, fontStyle: "normal" }}>{update.title}</a>
               </div>
             );
           })}
