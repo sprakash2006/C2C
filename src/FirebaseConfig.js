@@ -7,13 +7,13 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA3xYA5sWXbFr1OxG_Y4rEpiqrWF74Ia2c",
-  authDomain: "career-craftly.firebaseapp.com",
-  projectId: "career-craftly",
-  storageBucket: "career-craftly.firebasestorage.app",
-  messagingSenderId: "792312667738",
-  appId: "1:792312667738:web:e3a5f475f14c6fbc708263",
-  measurementId: "G-GQYSP1C86Q"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 
