@@ -1,19 +1,64 @@
 import { useState } from 'react';
 import { collection, query, where, getDocs } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
 import Admin from '../pages/Admin'
 import ReactDOM from "react-dom/client";
 import bcrypt from "bcryptjs";
 import { db } from '../FirebaseConfig'
 
+
 const AdminLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const handleSubmit = () => {
-    console.log('Login attempt:', { email, password });
-        const newWindow = window.open("", "_blank", "width=600,height=500");
-        const root = ReactDOM.createRoot(newWindow.document.body);
-        root.render(<Admin />);
+    const handleUnauthorized = (msg) => {
+    alert(msg);
+    navigate("/", { replace: true });
+    };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // 1. Find admin document with matching email
+      const q = query(collection(db, "admin"), where("email", "==", email));
+      const snapshot = await getDocs(q);
+      console.log("1");
+
+      if (snapshot.empty) {
+        handleUnauthorized("❌ Unauthorized Access! Redirecting to Home...");
+        return;
+      }
+
+
+      if (snapshot.empty) {
+        setError("Invalid email or password");
+        return;
+      }
+
+      const adminDoc = snapshot.docs[0].data();
+      console.log("2");
+      // 2. Compare entered password with stored bcrypt hash
+      const isPasswordValid = await bcrypt.compare(password, adminDoc.password);
+
+        if (!isPasswordValid) {
+        handleUnauthorized("❌ Unauthorized Access! Redirecting to Home...");
+        return;
+        }
+
+      console.log("3");
+      // 3. If valid → open Admin panel in new window
+      const newWindow = window.open("", "_blank", "width=900,height=700");
+      const root = ReactDOM.createRoot(newWindow.document.body);
+      root.render(<Admin />);
+      console.log("4");
+
+    } catch (err) {
+      console.error("Login error:", err);
+      setError("Something went wrong. Try again.");
+    }
   };
 
 
@@ -40,7 +85,8 @@ const AdminLogin = () => {
 
 
 
-  
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-slate-900 to-purple-950 flex items-center justify-center p-4 relative overflow-hidden">
       {/* Animated background pattern */}
