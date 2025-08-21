@@ -8,7 +8,8 @@ import Home from '../src/pages/Home'
 import Join from '../src/pages/Join'
 import Team from '../src/pages/Team'
 import Layout from '../src/Layout/layout'
-import NoPage from'../src/pages/NoPage'
+import NoPage from '../src/pages/NoPage'
+import AdminLogin from '../src/pages/AdminLogin'
 import ScrollToTop from '../src/components/ScrollToTop'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="Event" element={<Event />} />
           <Route path="About" element={<About />} />
           <Route path="Join" element={<Join />} />
+          <Route path="AdLog" element={<AdminLogin />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
