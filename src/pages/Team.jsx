@@ -90,7 +90,7 @@ const Team = () => {
             ))}
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center md:gap-[5vw]">
+        <div className="flex flex-col md:flex-row justify-center items-start md:gap-[5vw]">
           {OurTeam
             .filter((member) => member.role === "President" || member.role === "Vice President") // also fix case sensitivity
             .map((member) => (
@@ -105,7 +105,7 @@ const Team = () => {
             ))}
         </div>
         <p className="text-center text-4xl pt-[5vw] overflow-hidden pb-[3vw]">𖤐 &nbsp;Secretary Team&nbsp; 𖤐</p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:px-[12vw]">
+        <div className="grid grid-cols-1 items-start sm:grid-cols-2 lg:grid-cols-3 md:px-[12vw]">
           {OurTeam
             .filter((member) => member.role.includes("Secretary"))
             .map((member) => (
