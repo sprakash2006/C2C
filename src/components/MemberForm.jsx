@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { db } from '../FirebaseConfig';
+import { collection, addDoc } from "firebase/firestore";
+
 
 const TechClubForm = () => {
   const [formData, setFormData] = useState({
@@ -21,11 +24,72 @@ const TechClubForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Validation logic here...
-    console.log('Form submitted:', formData);
+
+    if (!formData.fullName.trim()) {
+      alert("Full name is required");
+      return;
+    }
+
+    if (!/^\d{6,}$/.test(formData.enrollmentId)) {
+      alert("Enrollment ID must be at least 6 digits");
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      alert("Enter a valid email address");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(formData.mobile)) {
+      alert("Mobile number must be 10 digits");
+      return;
+    }
+
+    // ✅ If all good, you can log or send data to backend
+    console.log("Form submitted:", formData);
+
+  try {
+    // Reference to your collection
+    const docRef = await addDoc(collection(db, "students"), {
+      fullname: formData.fullName,
+      prnno: Number(formData.enrollmentId),   // converting to number
+      email: formData.email,
+      mobileno: Number(formData.mobile),
+      yearofstudy: `Year ${formData.yearOfStudy}`, // formatting
+      department: formData.branch, 
+      linkedinurl: formData.linkedinUrl,
+      githuburl: formData.githubUrl,
+      motivation: formData.motivation,
+      createdAt: new Date()  // optional: timestamp
+    });
+
+    alert("Form Submitted Sucessfully!");
+
+    setFormData({
+      fullName: "",
+      enrollmentId: "",
+      email: "",
+      mobile: "",
+      yearOfStudy: "",
+      branch: "",
+      linkedinUrl: "",
+      githubUrl: "",
+      motivation: ""
+    });
+    
+    
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
+
+
+
 
   return (
     <div className="bg-[#02012492] rounded-xl shadow-md p-8 pt-15 mx-auto w-full max-w-3xl border border-[#ffffff38]">
@@ -40,7 +104,7 @@ const TechClubForm = () => {
 
 
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6"  onKeyDown={(e) => {  if (e.key === "Enter") {  e.preventDefault(); }  }}>
         {/* Full Width Inputs */}
 
 
@@ -56,7 +120,7 @@ const TechClubForm = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-gray-900 border-b border-gray-700 focus:border-blue-400 focus:outline-none text-sm text-gray-100 placeholder-gray-500 transition-all"
-              placeholder=""
+              placeholder="John Doe"
             />
             <div className="absolute bottom-0 left-0 w-0 h-px bg-blue-400 group-focus-within:w-full transition-all duration-300"></div>
           </div>
@@ -72,6 +136,7 @@ const TechClubForm = () => {
             <input
               type="text"
               name="enrollmentId"
+              placeholder="123456"
               value={formData.enrollmentId}
               onChange={handleChange}
               required
@@ -96,7 +161,7 @@ const TechClubForm = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-gray-900 border-b border-gray-700 focus:border-blue-400 focus:outline-none text-sm text-gray-100 placeholder-gray-500 transition-all"
-              placeholder=""
+              placeholder="john.doe24@vit.edu"
             />
             <div className="absolute bottom-0 left-0 w-0 h-px bg-blue-400 group-focus-within:w-full transition-all duration-300"></div>
           </div>
@@ -116,7 +181,7 @@ const TechClubForm = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-3 bg-gray-900 border-b border-gray-700 focus:border-blue-400 focus:outline-none text-sm text-gray-100 placeholder-gray-500 transition-all"
-              placeholder=""
+              placeholder="1234567890"
             />
             <div className="absolute bottom-0 left-0 w-0 h-px bg-blue-400 group-focus-within:w-full transition-all duration-300"></div>
           </div>
@@ -193,7 +258,7 @@ const TechClubForm = () => {
               value={formData.linkedinUrl}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-gray-900 border-b border-gray-700 focus:border-blue-400 focus:outline-none text-sm text-gray-100 placeholder-gray-500 transition-all"
-              placeholder="your username"
+              placeholder="https://www.linkedin.com/johndoe"
             />
             <div className="absolute bottom-0 left-0 w-0 h-px bg-blue-400 group-focus-within:w-full transition-all duration-300"></div>
           </div>
@@ -212,7 +277,7 @@ const TechClubForm = () => {
               value={formData.githubUrl}
               onChange={handleChange}
               className="w-full px-4 py-3 bg-gray-900 border-b border-gray-700 focus:border-blue-400 focus:outline-none text-sm text-gray-100 placeholder-gray-500 transition-all"
-              placeholder="your username"
+              placeholder="https://www.github.com/johndoe"
             />
             <div className="absolute bottom-0 left-0 w-0 h-px bg-blue-400 group-focus-within:w-full transition-all duration-300"></div>
           </div>
