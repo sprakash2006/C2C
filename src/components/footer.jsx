@@ -27,7 +27,7 @@ const footer = () => {
       <div className='flex flex-col justify-start items-start md:w-[13vw] md:pt-0 pt-5'>
         <h1 className='text-3xl pb-3 pr-0 md:pr-[45.7px]' style={{fontFamily: '"Electrolize", sans-serif', fontWeight: 400, fontStyle: "normal", background: "linear-gradient(90deg, #ff0057, #ff7e00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"}}>Contact Us</h1>
         <div>
-          <p className='text-[1.05rem] pb-[4px] md:pl-0 pl-15'  style={{ fontFamily: '"Figtree", sans-serif', fontOpticalSizing: 'auto', fontWeight: 300, fontStyle: 'normal' }}>Email:careercraftly@vit.edu</p>
+          <p className='text-[1.05rem] pb-[4px] md:pl-0 pl-15'  style={{ fontFamily: '"Figtree", sans-serif', fontOpticalSizing: 'auto', fontWeight: 300, fontStyle: 'normal' }} >Email:careercraftly@vit.edu</p>
           <p className='text-[1.05rem] pb-[4px] md:pl-0 pl-15'  style={{ fontFamily: '"Figtree", sans-serif', fontOpticalSizing: 'auto', fontWeight: 300, fontStyle: 'normal' }}>Phone:+91 8767690131</p>
           <p className='text-[1.05rem] pb-[4px] md:pl-0 pl-15'  style={{ fontFamily: '"Figtree", sans-serif', fontOpticalSizing: 'auto', fontWeight: 300, fontStyle: 'normal' }}>Phone:+91 8767690131</p>
           <p className='text-[1.05rem] pb-[4px] leading-6 md:pl-0 pl-15'  style={{ fontFamily: '"Figtree", sans-serif', fontOpticalSizing: 'auto', fontWeight: 300, fontStyle: 'normal' }}>Location: 666, Upper Indiranagar, Bibwewadi, Pune, Maharashtra, INDIA - 411 037.</p>
@@ -45,9 +45,9 @@ const footer = () => {
           referrerPolicy="no-referrer-when-downgrade"
         />
       </div>
-      <div className=' absolute pt-[195vw] md:pt-60 md:pl-53 flex justify-center items-center gap-10 md:gap-15 pl-10'>
+      <div className=' absolute pt-[195vw] md:pt-60 md:pl-53 flex justify-center items-center gap-10 md:gap-15 pl-10 pointer-events-none'>
         <h1 className='text-3xl' style={{fontFamily: '"Electrolize", sans-serif', fontWeight: 400, fontStyle: "normal", background: "linear-gradient(90deg, #ff0057, #ff7e00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"}}>Follow Us</h1>
-        <div className='flex justify-start items-start gap-6' >
+        <div className='flex justify-start items-start gap-6 pointer-events-auto' >
           <a href=""><Linkedin /></a>
           <a href=""><Facebook /></a>
           <a href=""><Instagram /></a>
