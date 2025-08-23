@@ -1,13 +1,15 @@
 import { useState } from 'react';
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, where, getDocs, limit } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
 import Admin from '../pages/Admin'
 import ReactDOM from "react-dom/client";
 import bcrypt from "bcryptjs";
 import { db } from '../FirebaseConfig'
+import { useAuth } from '../AuthContext';
 
 
 const AdminLogin = () => {
+  const { setIsAdmin } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState("");
@@ -18,48 +20,6 @@ const AdminLogin = () => {
     navigate("/", { replace: true });
     };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      // 1. Find admin document with matching email
-      const q = query(collection(db, "admin"), where("email", "==", email));
-      const snapshot = await getDocs(q);
-      console.log("1");
-
-      if (snapshot.empty) {
-        handleUnauthorized("❌ Unauthorized Access! Redirecting to Home...");
-        return;
-      }
-
-
-      if (snapshot.empty) {
-        setError("Invalid email or password");
-        return;
-      }
-
-      const adminDoc = snapshot.docs[0].data();
-      console.log("2");
-      // 2. Compare entered password with stored bcrypt hash
-      const isPasswordValid = await bcrypt.compare(password, adminDoc.password);
-
-        if (!isPasswordValid) {
-        handleUnauthorized("❌ Unauthorized Access! Redirecting to Home...");
-        return;
-        }
-
-      console.log("3");
-      // 3. If valid → open Admin panel in new window
-      const newWindow = window.open("", "_blank", "width=900,height=700");
-      const root = ReactDOM.createRoot(newWindow.document.body);
-      root.render(<Admin />);
-      console.log("4");
-
-    } catch (err) {
-      console.error("Login error:", err);
-      setError("Something went wrong. Try again.");
-    }
-  };
 
 
 
@@ -108,11 +68,11 @@ const AdminLogin = () => {
       <div className="bg-black/90 backdrop-blur-xl border border-white/10 rounded-3xl p-12 w-full max-w-md shadow-2xl shadow-black/50 relative z-10 transition-all duration-300 hover:-translate-y-2 hover:shadow-3xl hover:shadow-black/70">
         
         {/* Logo */}
-        <div className="text-center mb-10">
-          <h1 className="text-4xl font-light tracking-widest pb-3 bg-gradient-to-r from-pink-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        <div className="text-center pb-5">
+          <h1 className="text-4xl font-light tracking-widest pb-1 text-transparent" style={{ background: "linear-gradient(90deg, #ff0057, #ff7e00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontWeight:"400" }}>
             ADMIN
           </h1>
-          <p className="text-gray-400 text-sm tracking-wide">Welcome back</p>
+          <p className="text-gray-400 text-sm tracking-wide">Welcome back !</p>
         </div>
 
         {/* Form */}
