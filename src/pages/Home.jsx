@@ -1,11 +1,34 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Code, Smartphone, Shield, Palette, Gamepad2, Brain, Users, Trophy, Briefcase, Star, ArrowRight, Zap, Target, Rocket, Globe, Award, BookOpen, Network } from 'lucide-react';
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../FirebaseConfig"; 
+
+import { Users, Briefcase, Star, Award, BookOpen, Network } from 'lucide-react';
 import CCVideo from '../assets/CC-video.mp4'
 import Header from '../components/header'
 import { NavLink } from "react-router-dom";
 import './Home.css'
 
 const Home = () => {
+
+
+    const [updates, setUpdates] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const querySnapshot = await getDocs(collection(db, "updates"));
+          const data = querySnapshot.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data()
+          }));
+          setUpdates(data);
+        } catch (error) {
+          console.error("Error fetching students:", error);
+        }
+      };
+
+      fetchData();
+    }, []);
 
     const benefits = [
     { icon: Award, title: "Industry Certificates", desc: "Certificates from workshops, events, and partner companies" },
@@ -16,39 +39,6 @@ const Home = () => {
     { icon: Star, title: "Resume Enhancement", desc: "Real-world projects and company-backed certificates" }
   ];
 
-
-const updates = [
-  {
-    id: 1,
-    title: "Gandharv Shinde elected as Media Head for Career Craftly, bringing fresh ideas and innovative strategies to our club's outreach programs",
-    link: "https://www.instagram.com"
-  },
-  {
-    id: 2,
-    title: "New AI Workshop on Machine Learning announced, focusing on real-world applications and hands-on projects for students",
-    link: "https://www.instagram.com"
-  },
-  {
-    id: 3,
-    title: "Career Craftly wins Best Student Club Award 2025 for outstanding contributions in technology, innovation, and student engagement",
-    link: "https://www.instagram.com"
-  },
-  {
-    id: 4,
-    title: "Hackathon registrations are now open, inviting students from all over to collaborate, innovate, and solve real-world challenges",
-    link: "https://www.instagram.com"
-  },
-  {
-    id: 5,
-    title: "Workshop on React & Node.js successfully completed, providing students with practical knowledge and coding experience",
-    link: "https://www.instagram.com"
-  },
-  {
-    id: 6,
-    title: "Collaboration with TechnoFest announced, allowing students to participate in cutting-edge projects and tech events",
-    link: "https://www.instagram.com"
-  }
-];
 
 
 
@@ -142,10 +132,13 @@ const updates = [
         
         
         <div className='pt-[15vw] md:pt-[7vw] md:px-[7vw]'>
+          
           {updates.map((update) => {
             return(
-              <div key={update.index} className="pb-4 md:pb-2 md:pl-10 bg-[#010a14] hover:bg-[#041120] opacity-50 hover:opacity-100 border border-[#ffffff51] rounded-[5px] px-7 py-3">
-                  <a href={update.link} className=" md:text-[1.25rem] " style={{ fontFamily: "Libertinus Sans, sans-serif", fontWeight: 400, fontStyle: "normal" }}>{update.title}</a>
+              <div className="pb-2">
+                <div key={update.title} className="pb-4 md:pb-2 md:pl-10 bg-[#010a14] hover:bg-[#041120] opacity-50 hover:opacity-100 border border-[#ffffff51] rounded-[5px] px-7 py-3">
+                    <a href={update.link} className=" md:text-[1.25rem] " style={{ fontFamily: "Libertinus Sans, sans-serif", fontWeight: 400, fontStyle: "normal" }}>{update.title}</a>
+                </div>
               </div>
             );
           })}
