@@ -20,28 +20,47 @@ const AdminLogin = () => {
     navigate("/", { replace: true });
     };
 
+  const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+        // 1. Find admin document with matching email
+        const q = query(collection(db, "admin"),where("email", "==", email.trim().toLowerCase()),limit(1));
+        const snapshot = await getDocs(q);
+
+
+        if (snapshot.empty) {
+            console.log("❌ No admin found for this email:", email);
+            handleUnauthorized("❌ Unauthorized Access! Redirecting to Home...");
+            return;
+        }
 
 
 
+        const adminDoc = snapshot.docs[0].data();
+        console.log("✅ Found admin doc:", adminDoc);
 
 
+        // 2. Compare entered password with stored bcrypt hash
+        const isPasswordValid = await bcrypt.compare(password, adminDoc.password);
+        console.log("Password valid?", isPasswordValid);
 
+        if (!isPasswordValid) {
+            console.log("❌ Wrong password for:", email);
+            handleUnauthorized("❌ Unauthorized Access! Redirecting to Home...");
+            return;
+        }
 
+        console.log("🎉 Login successful, setting isAdmin = true");
 
+        setIsAdmin(true);
+        navigate("/admin");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        } catch (err) {
+        console.error("Login error:", err);
+        setError("Something went wrong. Try again.");
+        }
+  };
 
 
 
