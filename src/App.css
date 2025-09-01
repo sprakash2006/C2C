@@ -5,6 +5,43 @@
 }
 
 
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: #ff0057 #00000000;
+}
+
+*::-webkit-scrollbar {
+  width: 1px;   
+  height: 1px; 
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb:horizontal {
+  background: linear-gradient(90deg, #ff0057, #ff7e00);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:vertical {
+  background: linear-gradient(180deg, #ff0057, #ff7e00);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover:horizontal {
+  background: linear-gradient(90deg, #ff7e00, #ff0057);
+}
+
+*::-webkit-scrollbar-thumb:hover:vertical {
+  background: linear-gradient(180deg, #ff7e00, #ff0057);
+}
+
+
 
 .updates-strip {
   overflow-x: hidden;
