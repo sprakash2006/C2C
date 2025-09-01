@@ -115,7 +115,7 @@ const Home = () => {
           </div>
 
           <NavLink to='/Join'>
-            <div className='text-white text-center pt-10 flex px-[21vw] md:px-[42vw]'>
+            <div className='text-white text-center pt-10 flex px-[21vw] md:px-[42vw]' style={{cursor: "url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;24&quot; height=&quot;48&quot; viewBox=&quot;0 0 24 24&quot;><path fill=&quot;%23FFF&quot; stroke=&quot;%23000&quot; stroke-width=&quot;1.5&quot; stroke-linejoin=&quot;round&quot; d=&quot;M10 11V8.99c0-.88.59-1.64 1.44-1.86h.05A1.99 1.99 0 0 1 14 9.05V12v-2c0-.88.6-1.65 1.46-1.87h.05A1.98 1.98 0 0 1 18 10.06V13v-1.94a2 2 0 0 1 1.51-1.94h0A2 2 0 0 1 22 11.06V14c0 .6-.08 1.27-.21 1.97a7.96 7.96 0 0 1-7.55 6.48 54.98 54.98 0 0 1-4.48 0 7.96 7.96 0 0 1-7.55-6.48C2.08 15.27 2 14.59 2 14v-1.49c0-1.11.9-2.01 2.01-2.01h0a2 2 0 0 1 2.01 2.03l-.01.97v-10c0-1.1.9-2 2-2h0a2 2 0 0 1 2 2V11Z&quot;/></svg>') 0 0, auto" }}>
               <div className="relative left-2 top-[2px] h-6 w-6 flex items-center justify-center">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
@@ -136,7 +136,7 @@ const Home = () => {
           {updates.map((update) => {
             return(
               <div className="pb-2">
-                <div key={update.title} className="pb-4 md:pb-2 md:pl-10 bg-[#010a14] hover:bg-[#041120] opacity-50 hover:opacity-100 border border-[#ffffff51] rounded-[5px] px-7 py-3">
+                <div key={update.title} className="pb-4 md:pb-2 md:pl-10 bg-[#010a14] hover:bg-[#041120] opacity-50 hover:opacity-100 hover:border-none duration-500 hover:scale-105 border border-[#ffffff51] rounded-[5px] px-7 py-3">
                     <a href={update.link} className=" md:text-[1.25rem] " style={{ fontFamily: "Libertinus Sans, sans-serif", fontWeight: 400, fontStyle: "normal" }}>{update.title}</a>
                 </div>
               </div>
