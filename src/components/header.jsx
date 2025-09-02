@@ -34,7 +34,9 @@ const header = () => {
           <NavLink className={({ isActive }) => isActive ? "border-b-2 border-[rgb(255,0,0)] text-white pb-1" : "pb-1 hover:border-b-2 text-white hover:border-gray-500"} to='/Event' replace>Events</NavLink>
           <NavLink className={({ isActive }) => isActive ? "border-b-2 border-[rgb(255,0,0)] text-white pb-1" : "pb-1 hover:border-b-2 text-white hover:border-gray-500"} to='/Join' replace>Join Us</NavLink>
         </div>
-
+        <hr className="absolute top-20 w-[930px] text-[#ffffff38]" />
+        <hr className='absolute top-3.5 rotate-35 right-[938px] w-[25vw] text-[#ffffff38]' />
+        <hr className='absolute top-[17px] left-[934px] rotate-145 w-[25vw] text-[#ffffff38]'  />
       </div>
     </div>
     
