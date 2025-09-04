@@ -58,7 +58,7 @@ const Home = () => {
       </div>
 
       <div className="px-[2vw] md:px-[10vw] py-[10vw] md:py-[4vw] bg-[#010015] border-t border-b border-dashed border-t-[#ffffff4c] border-b-[#ffffff4c] text-white">
-        <p className='text-center text-[1.25rem] md:text-3xl' style={{ fontFamily: "Montserrat, sans-serif", fontOpticalSizing: "auto", fontWeight: "300", fontStyle: "normal" }}>“At <span style={{ background: "linear-gradient(90deg, #ff0057, #ff7e00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontWeight:"500" }}>Career Carfly</span> , we are a community of passionate coders and innovators, driven to inspire creativity, sharpen problem-solving, and build real-world projects through coding sessions, competitions, and collaborations.”</p>
+        <p className='text-center text-[1.25rem] md:text-3xl' style={{ fontFamily: "Montserrat, sans-serif", fontOpticalSizing: "auto", fontWeight: "300", fontStyle: "normal" }}>“At <span style={{ background: "linear-gradient(90deg, #ff0057, #ff7e00)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", fontWeight:"500" }}>Career Carftly</span> , we are a community of passionate coders and innovators, driven to inspire creativity, sharpen problem-solving, and build real-world projects through coding sessions, competitions, and collaborations.”</p>
       </div>
 
 
