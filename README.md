@@ -1,7 +1,7 @@
 # 🎓 Career Crafly Student Club  
 <br>
 <p align="center">
-  <img src="public/vite.svg" width="120" alt="Career Crafly Logo" />
+  <img src="src/assets/CC-name.png" width="120" alt="Career Crafly Logo" />
 </p>  
 
 <p align="center">
