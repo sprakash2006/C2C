@@ -59,7 +59,8 @@ npm run dev
 ```
 ---
 
----
+
+
 
 
 ## 🔑 Admin Panel  
@@ -72,14 +73,19 @@ npm run dev
   - 👥 View & Filter Members  
   - 📂 Export Member Data to CSV (select columns)  
 
+
 ---
 
+
 ## 🧭 Navigation Flow  
+
 
 - **Home Page** → About Us → Events → Announcements → Meet Members → Join Us  
 - **Admin Login** → Admin Dashboard → Manage Events → Manage Announcements → Manage Members  
 
+
 ---
+
 
 ## 🤝 Contributing  
 
