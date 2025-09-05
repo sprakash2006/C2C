@@ -92,7 +92,7 @@ npm run dev
 ## 🧭 Navigation Flow  
 
 
-
+<br><br>
 - **Home Page** → About Us → Events → Announcements → Meet Members → Join Us  
 - **Admin Login** → Admin Dashboard → Manage Events → Manage Announcements → Manage Members  
 
