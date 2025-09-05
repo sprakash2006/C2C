@@ -9,8 +9,8 @@
 <p align="center">
   <b>A dynamic student community website with admin panel, event management, and member registration.</b>
 </p> 
-<br>
----
+<br><br>
+
 
 ## ✨ Features  
 
