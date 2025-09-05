@@ -10,7 +10,9 @@
 
 ---
 
+
 ## ✨ Features  
+
 
 | 🚀 Feature | 📝 Description |
 |------------|----------------|
@@ -23,9 +25,12 @@
 | 🧭 **Dynamic Navbar** | Hides while scrolling, reappears on hover at the top of page. |
 | 🔒 **Secure Authentication** | Passwords encrypted with **bcrypt.js**. |
 
+
 ---
 
+
 ## 🛠 Tech Stack  
+
 
 | 🧩 Technology | 💻 Usage |
 |---------------|----------|
@@ -37,12 +42,15 @@
 | 🔑 **bcrypt.js** | Secure password hashing |
 | 🔐 **Private Routing** | Role-based access for admin panel |
 
+
 ---
 
 
----
+
+
 
 ## ⚙️ Installation & Setup  
+
 
 ```bash
 # Clone the repository
@@ -57,7 +65,8 @@ npm install
 # Run the development server
 npm run dev
 ```
----
+
+
 
 
 
@@ -65,7 +74,9 @@ npm run dev
 
 ## 🔑 Admin Panel  
 
+
 - Accessible only to admins with valid credentials.  
+
 
 - Features:  
   - ➕ Add / ✏️ Update / ❌ Delete Events  
@@ -77,17 +88,22 @@ npm run dev
 ---
 
 
+
 ## 🧭 Navigation Flow  
+
 
 
 - **Home Page** → About Us → Events → Announcements → Meet Members → Join Us  
 - **Admin Login** → Admin Dashboard → Manage Events → Manage Announcements → Manage Members  
 
 
+
 ---
 
 
+
 ## 🤝 Contributing  
+
 
 1. 🍴 Fork the repo  
 2. 🌱 Create a new branch (`feature-branch`)  
