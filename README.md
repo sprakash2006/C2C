@@ -39,6 +39,23 @@
 
 ---
 
-## 📂 Project Structure  
+
+---
+
+## ⚙️ Installation & Setup  
+
+```bash
+# Clone the repository
+git clone <your-repo-link>
+
+# Move into project folder
+cd c2c
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
 
 
