@@ -1,5 +1,5 @@
 # 🎓 Career Crafly Student Club  
-<br><br>
+<br>
 <p align="center">
   <img src="public/vite.svg" width="120" alt="Career Crafly Logo" />
 </p>  
@@ -10,7 +10,7 @@
 
 ---
 
-<br><br>
+<br>
 ## ✨ Features  
 
 
@@ -28,7 +28,7 @@
 
 ---
 
-<br><br>
+<br>
 ## 🛠 Tech Stack  
 
 
@@ -48,7 +48,7 @@
 
 
 
-<br><br>
+<br>
 ## ⚙️ Installation & Setup  
 
 
@@ -71,7 +71,7 @@ npm run dev
 
 
 
-<br><br>
+<br>
 ## 🔑 Admin Panel  
 
 
@@ -88,7 +88,7 @@ npm run dev
 ---
 
 
-<br><br>
+<br>
 ## 🧭 Navigation Flow  
 
 
@@ -101,7 +101,7 @@ npm run dev
 ---
 
 
-<br><br>
+<br>
 ## 🤝 Contributing  
 
 
