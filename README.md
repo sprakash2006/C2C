@@ -1,3 +1,4 @@
+# 🎓 Career Crafly Student Club  
 <br>
 <p align="center">
   <img src="src/assets/CC-name.png" width="320" alt="Career Crafly Logo" />
