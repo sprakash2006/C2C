@@ -4,12 +4,12 @@
 <p align="center">
   <img src="src/assets/CC-name.png" width="320" alt="Career Crafly Logo" />
 </p> 
-<br><br>
+
 
 <p align="center">
   <b>A dynamic student community website with admin panel, event management, and member registration.</b>
 </p>  
-
+<br><br>
 ---
 
 <br>
