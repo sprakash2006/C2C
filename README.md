@@ -29,7 +29,7 @@
 
 ---
 
-<br>
+
 ## 🛠 Tech Stack  
 
 
@@ -49,7 +49,7 @@
 
 
 
-<br>
+
 ## ⚙️ Installation & Setup  
 
 
@@ -72,7 +72,7 @@ npm run dev
 
 
 
-<br>
+
 ## 🔑 Admin Panel  
 
 
@@ -89,7 +89,7 @@ npm run dev
 ---
 
 
-<br>
+
 ## 🧭 Navigation Flow  
 
 
@@ -102,7 +102,7 @@ npm run dev
 ---
 
 
-<br>
+
 ## 🤝 Contributing  
 
 
