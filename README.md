@@ -57,5 +57,36 @@ npm install
 # Run the development server
 npm run dev
 
+---
+
+---
+
+
+## 🔑 Admin Panel  
+
+- Accessible only to admins with valid credentials.  
+
+- Features:  
+  - ➕ Add / ✏️ Update / ❌ Delete Events  
+  - 📢 Manage Announcements  
+  - 👥 View & Filter Members  
+  - 📂 Export Member Data to CSV (select columns)  
+
+---
+
+## 🧭 Navigation Flow  
+
+- **Home Page** → About Us → Events → Announcements → Meet Members → Join Us  
+- **Admin Login** → Admin Dashboard → Manage Events → Manage Announcements → Manage Members  
+
+---
+
+## 🤝 Contributing  
+
+1. 🍴 Fork the repo  
+2. 🌱 Create a new branch (`feature-branch`)  
+3. 💻 Make your changes  
+4. ✅ Submit a Pull Request  
+
 
 
