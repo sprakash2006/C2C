@@ -27,7 +27,7 @@
 | 🔒 **Secure Authentication** | Passwords encrypted with **bcrypt.js**. |
 
 
----
+
 
 
 ## 🛠 Tech Stack  
@@ -44,7 +44,7 @@
 | 🔐 **Private Routing** | Role-based access for admin panel |
 
 
----
+
 
 
 
@@ -86,7 +86,7 @@ npm run dev
   - 📂 Export Member Data to CSV (select columns)  
 
 
----
+
 
 
 
@@ -99,7 +99,7 @@ npm run dev
 
 
 
----
+
 
 
 
