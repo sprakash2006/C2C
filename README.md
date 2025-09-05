@@ -1,5 +1,5 @@
 # 🎓 Career Crafly Student Club  
-
+<br><br>
 <p align="center">
   <img src="public/vite.svg" width="120" alt="Career Crafly Logo" />
 </p>  
@@ -10,7 +10,7 @@
 
 ---
 
-
+<br><br>
 ## ✨ Features  
 
 
@@ -28,7 +28,7 @@
 
 ---
 
-
+<br><br>
 ## 🛠 Tech Stack  
 
 
@@ -48,7 +48,7 @@
 
 
 
-
+<br><br>
 ## ⚙️ Installation & Setup  
 
 
@@ -71,13 +71,13 @@ npm run dev
 
 
 
-
+<br><br>
 ## 🔑 Admin Panel  
 
 
 - Accessible only to admins with valid credentials.  
 
-
+<br><br>
 - Features:  
   - ➕ Add / ✏️ Update / ❌ Delete Events  
   - 📢 Manage Announcements  
@@ -88,11 +88,11 @@ npm run dev
 ---
 
 
-
+<br><br>
 ## 🧭 Navigation Flow  
 
 
-<br><br>
+
 - **Home Page** → About Us → Events → Announcements → Meet Members → Join Us  
 - **Admin Login** → Admin Dashboard → Manage Events → Manage Announcements → Manage Members  
 
@@ -101,7 +101,7 @@ npm run dev
 ---
 
 
-
+<br><br>
 ## 🤝 Contributing  
 
 
